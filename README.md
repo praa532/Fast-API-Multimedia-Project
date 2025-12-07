@@ -115,7 +115,8 @@ GET	/feed	Get feed
 DELETE	/posts/{id}	Delete post (owner only)
 ```
 
-🧠 Common Issues & Fixes
+## 🧠 Common Issues & Fixes
+
 ❌ no such column: posts.user_id
 
 ✅ Delete test.db and restart the server
