@@ -145,6 +145,6 @@ DELETE	/posts/{id}	Delete post (owner only)
 ## 🧑‍💻 Author
 
 Prashant Kr Prasad
-📧 Email: mr.prashantkrprasad@gmail.com
-🌐 GitHub: https://github.com/praa532
-🔗 LinkedIn: https://www.linkedin.com/in/prashantkrprasad
+- **📧 Email**: mr.prashantkrprasad@gmail.com
+- **🌐 GitHub**: https://github.com/praa532
+- **🔗 LinkedIn**: https://www.linkedin.com/in/prashantkrprasad
