@@ -1,9 +1,9 @@
-🧑‍🤝‍🧑 Simple Social
+## 🧑‍🤝‍🧑 Simple Social
 
 Simple Social is a minimal social media–style application built with FastAPI (backend) and Streamlit (frontend).
 Users can register, log in using JWT authentication, upload images/videos, and view a personalized feed.
 
-🚀 Features
+## 🚀 Features
 
 ✅ User authentication (Register / Login) using FastAPI Users
 
@@ -21,27 +21,13 @@ Users can register, log in using JWT authentication, upload images/videos, and v
 
 ⚡ Fully async backend with aiosqlite
 
-🛠️ Tech Stack
-Backend
+## 🛠️ Tech Stack
 
-FastAPI
+Backend ->  FastAPI, FastAPI Users, SQLAlchemy (Async), SQLite, JWT Authentication, ImageKit (media hosting & transformations)
 
-FastAPI Users
+Frontend -> Streamlit, Requests (HTTP client)
 
-SQLAlchemy (Async)
-
-SQLite
-
-JWT Authentication
-
-ImageKit (media hosting & transformations)
-
-Frontend
-
-Streamlit
-
-Requests (HTTP client)
-
+```plaintext
 📁 Project Structure
 .
 ├── app/
@@ -55,8 +41,10 @@ Requests (HTTP client)
 ├── test.db                 # SQLite database
 ├── requirements.txt
 └── README.md
+```
 
-⚙️ Setup Instructions
+## ⚙️ Setup Instructions
+
 1️⃣ Clone the repository
 git clone https://github.com/praa532/Fast-API-Multimedia-Project.git
 cd simple-social
@@ -98,7 +86,7 @@ streamlit run streamlit_app.py
 
 App UI: http://localhost:8501
 
-🔑 Authentication Flow
+## 🔑 Authentication Flow
 
 User registers via /auth/register
 
@@ -113,7 +101,11 @@ Authorization: Bearer <access_token>
 
 Protected endpoints validate token automatically
 
-🗂️ API Endpoints Summary
+
+
+## 🗂️ API Endpoints Summary
+
+```plaintext
 Method	Endpoint	Description
 POST	/auth/register	Register new user
 POST	/auth/jwt/login	Login user
@@ -121,6 +113,7 @@ GET	/users/me	Get current user
 POST	/upload	Upload post
 GET	/feed	Get feed
 DELETE	/posts/{id}	Delete post (owner only)
+```
 
 🧠 Common Issues & Fixes
 ❌ no such column: posts.user_id
@@ -147,3 +140,10 @@ DELETE	/posts/{id}	Delete post (owner only)
 ✅ Production DB (PostgreSQL)
 
 ✅ Docker support
+
+## 🧑‍💻 Author
+
+Prashant Kr Prasad
+📧 Email: mr.prashantkrprasad@gmail.com
+🌐 GitHub: https://github.com/praa532
+🔗 LinkedIn: https://www.linkedin.com/in/prashantkrprasad
