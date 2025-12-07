@@ -130,7 +130,7 @@ DELETE	/posts/{id}	Delete post (owner only)
 
 ✅ Use email as username when logging in
 
-📌 Future Improvements
+## 📌 Future Improvements
 
 ✅ Likes & comments
 
