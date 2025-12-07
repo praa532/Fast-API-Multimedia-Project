@@ -15,7 +15,6 @@ class Base(DeclarativeBase):
     pass
 
 class User(SQLAlchemyBaseUserTableUUID, Base):
-    __tablename__ = "users"
     posts = relationship("Post", back_populates="user")
 
 class Post(Base):

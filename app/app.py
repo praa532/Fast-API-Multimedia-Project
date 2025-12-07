@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException, File, UploadFile, Depends, Form
-from app.schemas import PostCreate, PostResponse
+from app.schemas import PostCreate, PostResponse, UserRead, UserCreate, UserUpdate
 from app.db import Post, create_db_and_tables, get_async_session
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
@@ -10,15 +10,22 @@ import shutil
 import os
 import uuid
 import tempfile
+from app.users import current_active_user, auth_backend, fastapi_users
 
 
-
+ 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await create_db_and_tables()
     yield
 
 app = FastAPI(lifespan=lifespan)
+
+app.include_router(fastapi_users.get_auth_router(auth_backend), prefix="/auth/jwt", tags=["auth"])
+app.include_router(fastapi_users.get_register_router(UserRead, UserCreate), prefix="/auth", tags=["auth"])
+app.include_router(fastapi_users.get_reset_password_router(), prefix="/auth", tags=["auth"])
+app.include_router(fastapi_users.get_verify_router(UserRead), prefix="/auth", tags=["auth"])
+app.include_router(fastapi_users.get_users_router(UserRead, UserCreate), prefix="/auth", tags=["users"])
 
 
  # Implementation for file upload and database entry creation
